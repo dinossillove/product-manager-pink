@@ -68,8 +68,8 @@ class AuthController extends Controller
     // Proses logout
     public function logout(Request $request)
     {
-        Auth::logout();
-
+        //keluarkan user
+        Auth::logout(); 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
